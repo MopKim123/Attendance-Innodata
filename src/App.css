@@ -1,0 +1,249 @@
+/*.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* .main {
+  background-color: #61dafb;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+.card {
+  background-color: red;
+  height: 50vh;
+  width: 100vh;
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  margin: auto;
+} 
+
+.main {
+  background-color: #61dafb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: #ffffff;
+  height: 50vh;
+  width: 100vh;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h1 {
+  text-align: center;
+}
+
+.dropdown-container,
+.input-container,
+.checkbox-container,
+.button-container {
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  width: 30vh;
+  justify-content: center;
+  padding: 10px;
+}
+
+.dropdown-container label,
+.input-container label,
+.checkbox-container label {
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: 5px;
+}
+
+.dropdown-container select,
+.input-container input[type="text"],
+.checkbox-container input[type="checkbox"] {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-right: 5px;  
+}
+
+.button-container button {
+  display: block;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.button-container button:hover {
+  background-color: #45a049;
+}
+
+.active {
+  position: relative;
+}
+
+.checkmark {
+  position: absolute;
+  right: 10px;
+  display: inline-block;
+  font-size: '10px';
+}
+*/
+
+
+.background {
+  background-image: url("./component/bg.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box{
+  padding: 10px;
+  width: 25%;
+  height: 70%;
+  border-radius: 25px;
+  background-color: #89CFF3;
+}
+.titleNames{
+  text-align: center;
+}
+.titleNames1 {
+  margin-left: 50px;
+}
+
+#dropdown {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none; 
+  background-color: #CDF5FD;
+}
+
+#dropdown:active {
+  outline: none;
+  background-color: #CDF5FD;
+}
+
+#dropdown:focus {
+  outline: none; 
+}
+
+#dropdown option {
+  outline: none; 
+  background-color: #CDF5FD;
+}
+
+.date-container, .dropdown-container{
+  display: grid;
+  grid-template-columns: 10vw auto;
+  grid-column-gap: 10px;
+  align-items: center;
+  margin-right: 57px;
+  margin-top: 20px;
+}
+.date-holder{
+  border-radius: 15px;
+  border: none;
+  width: 100%;
+  height: 25px;
+  padding: 5px 5px 5px 15px;
+  background-color: #CDF5FD;
+  outline: none;
+}
+.checkbox-container{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.button-container{
+  display: flex;
+  justify-content: center;
+}
+.textbox{
+  border-radius: 15px;
+  border: none;
+  width: 80%;
+  height: 25px;
+  padding: 5px 5px 5px 15px;
+  background-color: #CDF5FD;
+  outline: none;
+}
+.container{
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  margin-top: 20px;
+  border-radius: 15px;
+  width: 84%;
+  height: 50px;
+  padding: 5px;
+  border: none;
+  background-color: #CDF5FD;
+  color: #808080;
+
+  font-family: "Nunito", sans-serif;
+  letter-spacing: 2px;
+}
+.btn:hover{
+  background-color: rgba(205, 245, 253, 0.5);
+  color: #808080;
+}
+
+
+.border{
+  border: 1px solid;
+}
+
+
