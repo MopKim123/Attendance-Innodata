@@ -5,34 +5,34 @@ import {useState, useEffect} from 'react' ;
 function Home() {
 
   const [events, setEvents] = useState([]);
-  const [selectedEvent, setSelectedEvent] = useState(0); 
+  const [selectedEvent, setSelectedEvent] = useState("0"); 
   const [isChecked, setIsChecked] = useState(true); 
   const [name, setName] = useState('');
-  const [date, setDate] = useState('04/05/24');
+  const [date, setDate] = useState('');
   const [dayNum, setDayNum] = useState(''); 
 
   const toggleCheckbox = () => {
     setIsChecked(!isChecked);
   };
 
-  // //Fetches data
-  // useEffect(() => {
-  //   refreshList();
-  // }, []); 
-  // function refreshList(){
-  //   fetch(variables.API_URL+'event')
-  //   .then(response => response.json())
-  //   .then(data => { 
-  //     // Sort the data by eventId in descending order
-  //     const sortedData = data.sort((a, b) => b.eventId - a.eventId);
-  //     // Add the "Add new event" item at the beginning
-  //     const newData = [
-  //       { eventId: 0, name: 'Add new event', active: false, date: '', dayNum: '' },
-  //       ...sortedData
-  //     ];
-  //     setEvents(newData);
-  //   })
-  // };  
+  //Fetches data
+  useEffect(() => {
+    refreshList();
+  }, []); 
+  function refreshList(){
+    fetch(variables.API_URL+'event')
+    .then(response => response.json())
+    .then(data => { 
+      // Sort the data by eventId in descending order
+      const sortedData = data.sort((a, b) => b.eventId - a.eventId);
+      // Add the "Add new event" item at the beginning
+      const newData = [
+        { eventId: 0, name: 'Add new event', active: false, date: '', dayNum: '' },
+        ...sortedData
+      ];
+      setEvents(newData);
+    })
+  };  
 
   //dropdown select
   function handleDropdownChange(event) {
@@ -78,7 +78,7 @@ function Home() {
       .then((result)=>{
           // alert(result); 
           console.log(result)
-          // refreshList()
+          refreshList()
       },(error)=>{
           alert('Failed')
       }) 
@@ -119,7 +119,7 @@ function Home() {
       .then((result)=>{
           // alert(result); 
           console.log(result)
-          // refreshList()
+          refreshList()
       },(error)=>{
           alert('Failed')
       })
@@ -143,7 +143,7 @@ function Home() {
               <h4 className='titleNames1'>Event:</h4>
             </div>
             <div className="date-holder">
-              <select id="dropdown" name="dropdown" onChange={handleDropdownChange} value={selectedEvent} className='border'>
+              <select id="dropdown" name="dropdown" onChange={handleDropdownChange} value={selectedEvent}>
                 {events.map(event => (
                   // Dropdown content
                   <option key={event.eventId} value={event.eventId} className={event.active ? 'active' : ''}>
@@ -197,7 +197,7 @@ function Home() {
               id="dateInput" 
               value={date} 
               className='date-holder'
-              onChange={(e) => console.log(e.target.value)} 
+              onChange={(e) => setDate(e.target.value)} 
             />
           </div>
 
@@ -220,8 +220,9 @@ function Home() {
             }
           </div>
           
-          <div class="button-container">
-            <button className='btn' type="button" onClick={() => redirectTo('/upload')}>Upload List</button>
+          <div class="two-container">
+            <button className='btn-one' type="button" onClick={() => redirectTo('/upload')}>Upload List</button>
+            <button className='btn-two' type="button" onClick={() => redirectTo('/upload')}>Report List</button>
           </div>
         
       </div>

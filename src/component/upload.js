@@ -164,13 +164,13 @@ function Upload() {
   }
 
   return (
-    <div className="border-holder">
-      <div className="border">
-        <div className="border-content">
-          <h1>UPLOAD EXCEL FILE</h1>
-          <div>
+    <div className="background"> 
+      <div class="box">
+        
+          <h2 className="titleNames">Upload file</h2>
+          <div className='event-holder'>
             {/* Dropdown to select event */}
-            <select onChange={handleDropdownChange} value={selectedEvent}>
+            <select id='dropdown' onChange={handleDropdownChange} value={selectedEvent} className='border'>
               <option value="">Select Event</option>
               {events.map((event) => (
                 <option key={event.eventId} value={event.eventId}>{event.name}</option>
@@ -185,32 +185,35 @@ function Upload() {
               onChange={handleFileChange}
             />
           </div>
-          <button className="btn" onClick={handleSubmit}>Upload</button>
-        </div>
-      </div>
-      <div className="border">
-        <div className="border-content">
-          {excelData.length > 0 ? (
-            <table>
-              <thead>
-                <tr>
-                  <th>Employee ID</th>
-                  <th>Name</th>
-                </tr>
-              </thead>
-              <tbody>
-                {excelData.map((row, rowIndex) => (
-                  <tr key={rowIndex}>
-                    <td>{row[0]}</td>
-                    <td>{row[1]}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          ) : (
-            <div>No File Selected</div>
-          )}
-        </div>
+          <div className='content-view'>
+            <div className="border-content">
+              {excelData.length > 0 ? (
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Employee ID</th>
+                      <th>Name</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {excelData.map((row, rowIndex) => (
+                      <tr key={rowIndex}>
+                        <td>{row[0]}</td>
+                        <td>{row[1]}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              ) : (
+                <div>No File Selected</div>
+              )}
+            </div>
+          </div>
+          <div className='upload-btn'>
+            <button className="btn" onClick={handleSubmit}>Upload</button>
+          </div>
+          
+      
       </div>
     </div>
   );

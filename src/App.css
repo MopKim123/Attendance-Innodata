@@ -210,6 +210,13 @@
   display: flex;
   justify-content: center;
 }
+.two-container{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  width: 85%;
+  margin: 10px auto;
+}
 .textbox{
   border-radius: 15px;
   border: none;
@@ -236,12 +243,97 @@
   font-family: "Nunito", sans-serif;
   letter-spacing: 2px;
 }
+
 .btn:hover{
   background-color: rgba(205, 245, 253, 0.5);
   color: #808080;
 }
 
+.btn-one,.btn-two {
+  border-radius: 15px;
+  height: 50px;
+  border: none;
+  background-color: #CDF5FD;
+  color: #808080;
 
+  font-family: "Nunito", sans-serif;
+  letter-spacing: 2px;
+}
+.btn-one:hover, .btn-two:hover{
+  background-color: rgba(205, 245, 253, 0.5);
+  color: #808080;
+}
+.event-holder{
+  border-radius: 15px;
+  border: none;
+  height: 25px;
+  padding: 5px;
+  background-color: #CDF5FD;
+  outline: none;
+  margin: auto;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+/*rujiecss*/
+  .thisfile {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #CDF5FD;
+    color: #436850;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+  }
+  
+
+
+  .thisfile {
+    width: 50%;
+    height: 2vh;
+    border-radius: 50px;
+  }
+  .thisfile::-webkit-file-upload-button{
+    display: none;
+  }
+
+  .border-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+  }
+  .border-content {
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 10px;
+    width: 60%;
+    overflow-y: auto;
+}
+
+.border-content::-webkit-scrollbar {
+    width: 12px;
+}
+
+.border-content::-webkit-scrollbar-track {
+  background: none;
+}
+
+.border-content::-webkit-scrollbar-thumb {
+  background: none;
+}
+
+
+  .content-view{
+    margin-top: 5%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  .upload-btn{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+  }
 .border{
   border: 1px solid;
 }
