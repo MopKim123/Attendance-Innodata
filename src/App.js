@@ -2,6 +2,7 @@ import './App.css';
 // import Home from './Home';
 import Home from './component/home'; 
 import Upload from './component/upload'
+import Report from './component/report'
 // import { BrowserRouter, Route, Switch, Navlink } from 'react-router-dom';
 
 function App() {
@@ -12,6 +13,9 @@ function App() {
       break;  
     case "/upload": 
       Component = <Upload/>
+      break; 
+    case "/report": 
+      Component = <Report/>
       break; 
     default:
       break;

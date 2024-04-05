@@ -222,7 +222,7 @@ function Home() {
           
           <div class="two-container">
             <button className='btn-one' type="button" onClick={() => redirectTo('/upload')}>Upload List</button>
-            <button className='btn-two' type="button" onClick={() => redirectTo('/upload')}>Report List</button>
+            <button className='btn-two' type="button" onClick={() => redirectTo('/report')}>Report List</button>
           </div>
         
       </div>

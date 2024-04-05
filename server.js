@@ -70,6 +70,17 @@ app.post('/upload', async (req, res) => {
   }
 });
 
+app.get('/content/:eventId', async (req, res) => {
+  const eventId = req.params.eventId;
+  try {
+    const employees = await dbOperation.getEmployeesByEventId(eventId);
+    res.status(200).json(employees);
+  } catch (error) {
+    console.error("Error fetching employees:", error);
+    res.status(500).send("Error fetching employees");
+  }
+});
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

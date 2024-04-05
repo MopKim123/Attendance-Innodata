@@ -337,5 +337,75 @@
 .border{
   border: 1px solid;
 }
+/*start*/
+.event-selector{
+  border-radius: 15px;
+  border: none;
+  height: 25px;
+  padding: 5px;
+  background-color: #CDF5FD;
+  outline: none;
+  width: 50%;
+}
+.event-btn{
+  background-color: #CDF5FD;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+  border: none;
+  padding: 10px;
+}
 
+.table-container {
+  height: 50vh;
+  overflow-y: auto;
+  position: relative; 
+}
 
+.table-container::-webkit-scrollbar {
+  display: none;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employee-table th,
+.employee-table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.employee-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+  position: sticky; 
+  top: 0; 
+}
+.box-report{
+  padding: 10px;
+  width: 25%;
+  height: 75%;
+  border-radius: 25px;
+  background-color: #89CFF3;
+}
+.btn-Download {
+  margin-top: 100px;
+  border-radius: 15px;
+  width: 84%;
+  height: 50px;
+  padding: 5px;
+  border: none;
+  background-color: #CDF5FD;
+  color: #808080;
+
+  font-family: "Nunito", sans-serif;
+  letter-spacing: 2px;
+}
+
+.btn-Download:hover{
+  background-color: rgba(205, 245, 253, 0.5);
+  color: #808080;
+}

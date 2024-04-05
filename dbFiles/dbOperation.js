@@ -91,10 +91,25 @@ const checkEmployeeExists = async (employeeId, eventId) => {
     }
   }
 
+  // Function to get employees by event ID
+const getEmployeesByEventId = async (eventId) => {
+    try {
+        let pool = await sql.connect(config);
+        let result = await pool.request()
+            .input('eventId', sql.Int, eventId)
+            .query("SELECT * FROM Employee WHERE eventId = @eventId");
+        return result.recordset;
+    } catch (error) {
+        console.log(error);
+        throw error;
+    }
+}
+
 module.exports = {
     insertEmployeesFromExcel,
     insertEmployee, 
     getEmployees,
     getEvents,
     checkEmployeeExists,
+    getEmployeesByEventId
 };
